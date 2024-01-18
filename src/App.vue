@@ -23,7 +23,6 @@ export default{
 </script>
 
 <template>
-	<h1>My template Vite Vue Sass</h1>
 	<AppHeader/>
 	<AppMain/>
 	<AppFooter/>

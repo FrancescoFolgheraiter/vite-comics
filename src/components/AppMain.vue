@@ -2,7 +2,7 @@
 export default{
 	data() {
 		return{
-			text:"Main"
+			text:"-->Content goes here<---"
 		};
 	},
 	components:{
@@ -17,9 +17,20 @@ export default{
 
 <template>
 	<main>
-		{{ text }}
+		<div class="container">
+			<h1>
+				{{ text }}
+			</h1>
+		</div>
 	</main>
 </template>
 
 <style lang ="scss" scoped>
+main{
+	background-color: grey;
+}
+.container{
+	width:1200px;
+	margin:0 auto;
+}
 </style>

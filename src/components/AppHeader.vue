@@ -34,7 +34,9 @@ export default{
 		<nav>
 			<ul class="d-flex">
 				<li v-for="(elem,i) in navBar">
-					{{ elem }}
+					<a href="">
+						{{ elem }}
+					</a>
 				</li>
 			</ul>
 		</nav>
