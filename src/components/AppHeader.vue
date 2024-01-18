@@ -27,36 +27,26 @@ export default{
 </script>
 
 <template>
-	<header class="d-flex debug">
-		<div id="logo">
-			<img src="/img/dc-logo.png" alt="">
+	<header class="debug">
+		<div class="container d-flex ">
+			<div id="logo">
+				<img src="/img/dc-logo.png" alt="">
+			</div>
+			<nav>
+				<ul class="d-flex">
+					<li v-for="(elem,i) in navBar">
+						<a href="">
+							{{ elem }}
+						</a>
+					</li>
+				</ul>
+			</nav>
 		</div>
-		<nav>
-			<ul class="d-flex">
-				<li v-for="(elem,i) in navBar">
-					<a href="">
-						{{ elem }}
-					</a>
-				</li>
-			</ul>
-		</nav>
 	</header>
 </template>
 
 <style lang ="scss" scoped>
-header{
-	width:1200px;
-	margin:0 auto;
-	justify-content: space-between;
-}
-ul{
-	list-style: none;
-}
-li{
-	margin:auto 10px;
-}
-.d-flex{
-	display:flex;
-	flex-wrap: wrap;
-}
+@use"../assets/scss/main.scss" as *;
+
+
 </style>

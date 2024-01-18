@@ -2,20 +2,22 @@
 export default{
 	data() {
 		return{
-			navBar:[
-				"DIGITAL COMICS",
-				"DC MERCHANDISE",
-				"SUBSCRIPTION",
-				"COMICS SHOP LOCATOR",
-				"DC POWE VISA"
-			]
+			socialIcon:[
+			"footer-facebook.png",
+			"footer-periscope.png",
+			"footer-pinterest.png",
+			"footer-twitter.png",
+			"footer-youtube.png",
+			],
 		};
 	},
 	components:{
 		
 	},
 	methods:{
-
+		getImagePath(imgPath){
+			return new URL (imgPath, import.meta.url).href;
+		}
 	}
 }
 
@@ -24,16 +26,7 @@ export default{
 <template>
 	<footer>
 		<div class="container">
-			<div class="top-footer">
-				<ul class="d-flex">
-					<li v-for="(elem) in navBar">
-						<a href="">
-							{{ elem }}
-						</a>
-					</li>
-				</ul>
-			</div>
-			<div class="bottom-footer d-flex">
+			<div class="top-footer d-flex justify-content-between">
 				<div id="asideL">
 					nav bar
 				</div>
@@ -41,23 +34,31 @@ export default{
 					<img src="/img/dc-logo-bg.png" alt="">
 				</div>
 			</div>
+			<div class="bottom-footer">
+				<div>
+					<button>
+						SING-UP NOW
+					</button>
+					<div class="social">
+						<div>
+							FOLLOW US
+						</div>
+						<div v-for="(elem) in socialIcon" class="social-container">
+							<img :src="getImagePath('/img/${elem}')" alt="">
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</footer>
 </template>
 
 <style lang ="scss" scoped>
-.container{
-	width:1200px;
-	margin:0 auto;
+@use"../assets/scss/main.scss" as *;
+footer{
+	background-image: url("/img/footer-bg.jpg");
+
 }
-ul{
-	list-style: none;
-}
-li{
-	margin:auto 10px;
-}
-.d-flex{
-	display:flex;
-	flex-wrap: wrap;
-}
+
+
 </style>

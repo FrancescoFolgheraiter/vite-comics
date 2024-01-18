@@ -10,3 +10,25 @@ h1{
 .debug{
     border: 1px dashed red;
 }
+
+.d-flex{
+	display:flex;
+	flex-wrap: wrap;
+
+    &:hover{
+        background-color: greenyellow ;
+    } 
+}
+.justify-content-between{
+    justify-content: space-between;
+}
+.container{
+	width:1200px;
+	margin:0 auto;
+}
+ul{
+	list-style: none;
+}
+li{
+	margin:auto 10px;
+}
