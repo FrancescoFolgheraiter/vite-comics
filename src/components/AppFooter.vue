@@ -35,16 +35,16 @@ export default{
 				</div>
 			</div>
 			<div class="bottom-footer">
-				<div>
+				<div class="d-flex justify-content-between">
 					<button>
 						SING-UP NOW
 					</button>
-					<div class="social">
+					<div class="social d-flex">
 						<div>
 							FOLLOW US
 						</div>
-						<div v-for="(elem) in socialIcon" class="social-container">
-							<img :src="getImagePath('/img/${elem}')" alt="">
+						<div class="social-container">
+							<img v-for="(elem) in socialIcon" :src="getImagePath('/img/'+ elem)" alt="">
 						</div>
 					</div>
 				</div>
