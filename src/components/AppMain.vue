@@ -5,7 +5,6 @@ import SingleProduct from './AppProduct.vue'
 export default{
 	data() {
 		return{
-			text:"-->Content goes here<---",
 			products:[
 				{
 					"thumb": "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
@@ -98,6 +97,9 @@ export default{
 <template>
 	<main>
 		<div class="container">
+			<div id="series" class="text-white">
+				Current Series
+			</div>
 			<div class="products-container d-flex">
                 <SingleProduct class="col-1-6" v-for="(elem, i) in products" :key="i" :product="elem"/>
             </div>
@@ -111,8 +113,24 @@ export default{
 @use "../assets/scss/partials/variables.scss" as *;
 main{
 	background-color: $bg-main;
-	.col-1-6{
-		width: calc(100% / 6);
+	padding: 30px 0 ;
+	.container{
+		position: relative;
+		#series{
+			padding:10px;
+			background-color: $bg-main-bar;
+			width:220px;
+			text-align: center;
+			font-weight: bold;
+			text-transform: uppercase;
+			font-size: 1.2rem;
+			position:absolute;
+			bottom: 100%;
+			left: 0;
+		}
+		.col-1-6{
+			width: calc(100% / 6);
+		}
 	}
 }
 
