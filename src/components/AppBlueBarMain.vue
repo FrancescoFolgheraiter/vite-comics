@@ -44,7 +44,7 @@ export default{
 		<div class="container-small d-flex">
 			<div class="col-1-5 align-items-center" v-for="(elem,i) in navBar" :key="i">
 					<div class="img-container">
-						<img :src="getImagePath(elem.path)"  alt="">
+						<img :src="getImagePath(elem.path)"  :alt="elem.name">
 					</div>
 					<a href="">
 						{{ elem.name }}
