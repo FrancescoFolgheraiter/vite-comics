@@ -135,8 +135,18 @@ footer{
 		#asideL{
 			width:50%;
 			padding: 50px 0;
-			.col1{
+			.col-1{
 				width:33%;
+
+				h3{
+					font-weight: bold;
+					font-size: 1.5rem;
+					margin: 20px 0;
+				}
+				li{
+					color:grey;
+					margin-bottom: 5px;
+				}
 			}
 		}
 		#asideR{
