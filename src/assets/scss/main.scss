@@ -4,7 +4,7 @@
 
 .d-flex{
 	display:flex;
-	flex-wrap: wrap
+	flex-wrap: wrap;
 }
 .justify-content-between{
     justify-content: space-between;
@@ -15,6 +15,10 @@
 .container{
 	width:1200px;
 	margin:0 auto;
+}
+.container-small{
+    width: 1100px;
+    margin:0 auto;
 }
 ul{
 	list-style: none;

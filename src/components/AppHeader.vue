@@ -34,7 +34,7 @@ export default{
 			</div>
 			<nav>
 				<ul>
-					<li v-for="(elem,i) in navBar">
+					<li v-for="(elem,i) in navBar" :key="i">
 						<a href="">
 							{{ elem }}
 						</a>

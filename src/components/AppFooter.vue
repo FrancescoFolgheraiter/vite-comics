@@ -65,13 +65,13 @@ export default{
 						<div>
 							<h3 class="text-white">DC COMICS</h3>
 							<ul>
-								<li v-for="(elem) in comicsList">
+								<li v-for="(elem,i) in comicsList" :key="i">
 									{{ elem }}
 								</li>
 							</ul>
 							<h3 class="text-white">SHOP</h3>
 							<ul>
-								<li v-for="(elem) in shopList">
+								<li v-for="(elem,i) in shopList" :key="i">
 									{{ elem }}
 								</li>
 							</ul>
@@ -82,7 +82,7 @@ export default{
 							DC
 						</h3>
 						<ul>
-							<li v-for="(elem) in dcList">
+							<li v-for="(elem,i) in dcList" :key="i">
 								{{elem}}
 							</li>
 						</ul>
@@ -114,7 +114,7 @@ export default{
 							FOLLOW US
 						</div>
 						<div class="social-container">
-							<img v-for="(elem) in socialIcon" :src="getImagePath('/img/'+ elem)" alt="">
+							<img v-for="(elem,i) in socialIcon" :src="getImagePath('/img/'+ elem)" :alt="elem" :key="i">
 						</div>
 					</div>
 				</div>
