@@ -1,6 +1,7 @@
 <script>
 import AppBlueBarMain from './AppBlueBarMain.vue';
 
+
 export default{
 	data() {
 		return{
@@ -95,6 +96,7 @@ export default{
 
 <template>
 	<main>
+		
 		<div class="container">
 			<div>
 				<h1 class="text-white">
