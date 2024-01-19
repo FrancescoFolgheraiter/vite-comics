@@ -1,26 +1,16 @@
 @use "partials/variables.scss" as *;
 @use "partials/mixins.scss" as *;
 
-h1{
-    text-align: center;
-    font-size: bold;
-    text-transform: uppercase;
-    color:lightseagreen;
-}
-.debug{
-    border: 1px dashed red;
-}
 
 .d-flex{
 	display:flex;
-	flex-wrap: wrap;
-
-    &:hover{
-        background-color: greenyellow ;
-    } 
+	flex-wrap: wrap
 }
 .justify-content-between{
     justify-content: space-between;
+}
+.align-items-center{
+    align-items: center;
 }
 .container{
 	width:1200px;

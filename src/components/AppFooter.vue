@@ -58,10 +58,10 @@ export default{
 
 <template>
 	<footer>
-		<div class="container">
-			<div class="top-footer  d-flex justify-content-between">
-				<div id="asideL d-flex">
-					<div>
+		<div class="top-footer">
+			<div class="container d-flex">
+				<div id="asideL" class="d-flex">
+					<div class="col-1">
 						<div>
 							<h3 class="text-white">DC COMICS</h3>
 							<ul>
@@ -77,7 +77,7 @@ export default{
 							</ul>
 						</div>
 					</div>
-					<div>
+					<div class="col-1">
 						<h3 class="text-white">
 							DC
 						</h3>
@@ -87,24 +87,26 @@ export default{
 							</li>
 						</ul>
 					</div>
-					<div>
+					<div class="col-1">
 						<h3 class="text-white">
 							SITES
 						</h3>
 						<ul>
-							<li v-for="(elem) in siteList">
+							<li v-for="(elem,i) in siteList" :key="i">
 								{{ elem }}
 							</li>
 						</ul>
 					</div>
 				</div>
 				<div id="asideR">
-					<img src="/img/dc-logo-bg.png" alt="">
+
 				</div>
 			</div>
-			<div class="bottom-footer">
-				<div class="d-flex justify-content-between">
-					<button>
+		</div>
+		<div class="bottom-footer">
+			<div class="container">
+				<div class="d-flex justify-content-between align-items-center">
+					<button class="text-white">
 						SING-UP NOW
 					</button>
 					<div class="social d-flex">
@@ -123,12 +125,70 @@ export default{
 
 <style lang ="scss" scoped>
 @use"../assets/scss/main.scss" as *;
+@use "../assets/scss/partials/variables.scss" as *;
 footer{
-	background-image: url("/img/footer-bg.jpg");
+	min-height: 400px;
+	.top-footer{
+		background-image: url("/img/footer-bg.jpg");
+		background-size: cover;
+		background-repeat: no-repeat;
+		#asideL{
+			width:50%;
+			padding: 50px 0;
+			.col1{
+				width:33%;
+			}
+		}
+		#asideR{
+			width: 50%;
+			background-image: url(/img/dc-logo-bg.png);
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+		}
+
+	}
+	
+	.bottom-footer{
+		height:80px;
+		background-color: $bg-footer;
+		vertical-align: middle;
+		.container{
+			height: 100%;
+			> *{
+				height: 100%;
+			}
+		}
+
+		button{
+			padding:15px;
+			font-weight: bold;
+			font-size: 1.5rem;
+			border:2px solid $bg-main-bar;
+			background-color: transparent;
+		}
+		.social{
+
+			& >*:first-child{
+				color:$bg-main-bar;
+				font-size: 1.5rem;
+				font-weight: bold;
+				margin-right: 40px;
+				line-height: 40px;
+				vertical-align: middle;
+			}
+			> .social-container{
+
+				> img{
+					margin-right: 20px;
+				}
+			}
+			
+		}
+
+	}
 }
-.asideL{
-	width:50%;
-}
+
 
 
 </style>

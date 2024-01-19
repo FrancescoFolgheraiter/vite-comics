@@ -28,12 +28,12 @@ export default{
 
 <template>
 	<header class="debug">
-		<div class="container d-flex ">
+		<div class="container d-flex align-items-center">
 			<div id="logo">
 				<img src="/img/dc-logo.png" alt="">
 			</div>
 			<nav>
-				<ul class="d-flex">
+				<ul class="d-flex ">
 					<li v-for="(elem,i) in navBar">
 						<a href="">
 							{{ elem }}
