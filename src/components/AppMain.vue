@@ -1,6 +1,6 @@
 <script>
 import AppBlueBarMain from './AppBlueBarMain.vue';
-
+import SingleProduct from './AppProduct.vue'
 
 export default{
 	data() {
@@ -84,6 +84,7 @@ export default{
 	},
 	components:{
 		AppBlueBarMain,
+		SingleProduct,
 	},
 	methods:{
 		getImagePath(imgPath){
@@ -96,13 +97,10 @@ export default{
 
 <template>
 	<main>
-		
 		<div class="container">
-			<div>
-				<h1 class="text-white">
-					{{ text }}
-				</h1>
-			</div>
+			<div class="products-container d-flex">
+                <SingleProduct class="col-1-6" v-for="(elem, i) in products" :key="i" :product="elem"/>
+            </div>
 		</div>
 		<AppBlueBarMain/>
 	</main>
@@ -113,15 +111,8 @@ export default{
 @use "../assets/scss/partials/variables.scss" as *;
 main{
 	background-color: $bg-main;
-	.img-container{
-		max-width: 80px;
-		height: 90px;
-		
-		> img{
-		width: 100%;
-		height: 100%;
-		object-fit: cover;
-		}
+	.col-1-6{
+		width: calc(100% / 6);
 	}
 }
 
